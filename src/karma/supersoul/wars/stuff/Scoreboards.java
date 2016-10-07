@@ -15,7 +15,10 @@ public class Scoreboards {
 		ScoreboardManager sbm = Bukkit.getScoreboardManager();
 		Scoreboard sb = sbm.getNewScoreboard();
 		int ri = config.getList(".Red").size();
+		int bi = config.getList(".Blue").size();
 		String n1 = new String("" + ri);
 		sb.registerNewObjective(ChatColor.RED + "Red", n1);
+		sb.registerNewObjective("&7", String.valueOf(ri - 1));
+		sb.registerNewObjective(ChatColor.BLUE + "Blue", String.valueOf(bi));
 	}
 }
