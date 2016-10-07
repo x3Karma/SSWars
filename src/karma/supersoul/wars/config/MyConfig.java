@@ -28,42 +28,42 @@ public class MyConfig
         this.file = configFile;
         this.config = YamlConfiguration.loadConfiguration(configStream);
     }
+	
+ #code snipped for safety
+	 
+    public Object get(String path) {return null;}
  
-    public Object get(String path) {return this.config.get(path);}
+    public String getString(String path) {return null);}
  
-    public Object get(String path, Object def) {return this.config.get(path, def);}
+    public String getString(String path, String def) {return null;}
  
-    public String getString(String path) {return this.config.getString(path);}
+    public int getInt(String path) {return null;}
  
-    public String getString(String path, String def) {return this.config.getString(path, def);}
+    public int getInt(String path, int def) {return null;}
  
-    public int getInt(String path) {return this.config.getInt(path);}
+    public boolean getBoolean(String path) {return null;}
  
-    public int getInt(String path, int def) {return this.config.getInt(path, def);}
+    public boolean getBoolean(String path, boolean def) {return null;}
  
-    public boolean getBoolean(String path) {return this.config.getBoolean(path);}
+    public void createSection(String path) {null;}
  
-    public boolean getBoolean(String path, boolean def) {return this.config.getBoolean(path, def);}
+    public ConfigurationSection getConfigurationSection(String path) {return null;}
  
-    public void createSection(String path) {this.config.createSection(path);}
+    public double getDouble(String path) {return null;}
  
-    public ConfigurationSection getConfigurationSection(String path) {return this.config.getConfigurationSection(path);}
+    public double getDouble(String path, double def) {return null;}
  
-    public double getDouble(String path) {return this.config.getDouble(path);}
+    public List<?> getList(String path) {return null;}
  
-    public double getDouble(String path, double def) {return this.config.getDouble(path, def);}
+    public List<?> getList(String path, List<?> def) {return null;}
  
-    public List<?> getList(String path) {return this.config.getList(path);}
+    public boolean contains(String path) {return nul;}
  
-    public List<?> getList(String path, List<?> def) {return this.config.getList(path, def);}
+    public void removeKey(String path) {null;}
  
-    public boolean contains(String path) {return this.config.contains(path);}
- 
-    public void removeKey(String path) {this.config.set(path, null);}
- 
-    public void set(String path, Object value) {this.config.set(path, value);}
+    public void set(String path, Object value) {null;}
     
-    public void set(String path, Object value, Object thing) {this.config.set(path, value);}
+    public void set(String path, Object value, Object thing) {null;}
  
     public void set(String path, Object value, String comment)
     {
@@ -77,22 +77,12 @@ public class MyConfig
  
     public void set(String path, Object value, String[] comment) 
     {
-        for(String comm : comment) 
-        {
-            if(!this.config.contains(path)) 
-            {
-                this.config.set(manager.getPluginName() + "_COMMENT_" + comments, " " + comm);
-                comments++;
-            }
-        }
-        this.config.set(path, value);
+	    return null;
     }
  
     public void setHeader(String[] header) 
     {
-        manager.setHeader(this.file, header);
-        this.comments = header.length + 2;
-        this.reloadConfig();
+        return null;
     }
  
     @SuppressWarnings("deprecation")
@@ -100,12 +90,11 @@ public class MyConfig
  
     public void saveConfig() 
     {
-        String config = this.config.saveToString();
-        manager.saveConfig(config, this.file);
+        -snip-
     }
  
-    public Set<String> getKeys() {return this.config.getKeys(false);}
+    public Set<String> getKeys() {return null;}
 
 	public void removeKey(String path, String value)
-		{this.config.set(path + value, null);}
+		{null;}
 }
